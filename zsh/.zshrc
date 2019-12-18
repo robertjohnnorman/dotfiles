@@ -156,3 +156,6 @@ _fix_cursor() {
 }
 
 precmd_functions+=(_fix_cursor)
+
+
+alias workspace="tmux new-session \; split-window -h \; split-window -v \; select-pane -t 0 \;"
