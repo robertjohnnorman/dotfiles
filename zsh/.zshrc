@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker git-extras kubectl pip pyenv python sbt scala systemd tmux vi-mode)
+plugins=(git docker git-extras kubectl pip pyenv python sbt scala systemd tmux vi-mode virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,7 +119,7 @@ export GEOMETRY_COLOR_EXIT_VALUE="red"
 
 export GEOMETRY_GIT_SYMBOL_REBASE="22EE"
 
-
+GEOMETRY_PROMPT_PLUGINS=(+virtualenv exec_time git)
 
 
 # Then, source plugins and add commands to $PATH
@@ -156,6 +156,5 @@ _fix_cursor() {
 }
 
 precmd_functions+=(_fix_cursor)
-
 
 alias workspace="tmux new-session \; split-window -h \; split-window -v \; select-pane -t 0 \;"
