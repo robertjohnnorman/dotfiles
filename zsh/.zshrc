@@ -129,6 +129,19 @@ zplug load
  # Activate vim mode.
 bindkey -v
 
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bold"
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND="fg=red"
+export HISTORY_SUBSTRING_SEARCH_FUZZY="non-empty"
+
+# Keybindings for substring search plugin. Maps up and down arrows.
+bindkey -M main '^[OA' history-substring-search-up
+bindkey -M main '^[OB' history-substring-search-down
+bindkey -M main '^[[A' history-substring-search-up
+bindkey -M main '^[[B' history-substring-search-up
+
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
 # Remove mode switching delay.
 KEYTIMEOUT=5
 
