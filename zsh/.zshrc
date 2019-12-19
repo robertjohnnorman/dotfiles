@@ -62,11 +62,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git command-not-found docker git-extras kubectl pip pyenv python sbt scala systemd tmux vi-mode virtualenv vundle web-search)
+plugins=(autojump debian git command-not-found docker git-extras kubectl pip pj pyenv python sbt scala systemd tmux vi-mode virtualenv vundle web-search)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# NOTE: autojump must be installed via apt for this to work
+source /usr/share/autojump/autojump.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -173,4 +176,7 @@ _fix_cursor() {
 
 precmd_functions+=(_fix_cursor)
 
+PROJECT_PATHS=(~/Projects)
+
 alias workspace="tmux new-session \; split-window -h \; split-window -v \; select-pane -t 0 \;"
+
