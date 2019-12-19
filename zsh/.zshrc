@@ -180,3 +180,14 @@ PROJECT_PATHS=(~/Projects)
 
 alias workspace="tmux new-session \; split-window -h \; split-window -v \; select-pane -t 0 \;"
 
+autoload -Uz surround
+
+bindkey -M vicmd -r "s"
+
+zle -N delete-surround surround
+zle -N add-surround surround
+zle -N change-surround surround
+bindkey -a cs change-surround
+bindkey -a ds delete-surround
+bindkey -a ys add-surround
+bindkey -M visual S add-surround
