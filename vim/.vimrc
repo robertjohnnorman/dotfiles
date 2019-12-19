@@ -52,8 +52,12 @@ let g:airline#extensions#tmuxline#enabled = 0
 
 colorscheme vim-monokai-tasty
 syntax on
+set t_Co=256
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=NONE
 
 let g:airline_theme = "minimalist"
 let g:rehash256 = 1
+
+set number
+set relativenumber
