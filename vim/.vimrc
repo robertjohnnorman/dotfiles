@@ -30,8 +30,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'patstockwell/vim-monokai-tasty'
-Bundle 'edkolev/tmuxline.vim'
+Plugin 'airblade/vim-gitgutter'
 
+Bundle 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,3 +62,20 @@ let g:rehash256 = 1
 
 set number
 set relativenumber
+
+set updatetime=100
+
+" Use fontawesome icons as signs
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+
+highlight GitGutterAdd ctermfg=148
+highlight GitGutterChange ctermfg=208
+highlight GitGutterModified ctermfg=208
+highlight GitGutterDelete ctermfg=197
+highlight GitGutterChangeDelete ctermfg=197
+
+nmap <leader>hc :pclose<CR>
