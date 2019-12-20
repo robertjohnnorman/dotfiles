@@ -191,3 +191,5 @@ bindkey -a cs change-surround
 bindkey -a ds delete-surround
 bindkey -a ys add-surround
 bindkey -M visual S add-surround
+
+bindkey '^[^?' backward-kill-word
