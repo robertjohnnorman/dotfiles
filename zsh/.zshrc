@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump debian git command-not-found docker git-extras kubectl pip pj pyenv python sbt scala systemd tmux vi-mode virtualenv vundle web-search)
+plugins=(autojump debian git command-not-found docker git-extras kubectl pip pj pyenv python safe-paste sbt scala systemd tmux vi-mode virtualenv vundle web-search)
 
 source $ZSH/oh-my-zsh.sh
 
