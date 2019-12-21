@@ -193,3 +193,5 @@ bindkey -a ys add-surround
 bindkey -M visual S add-surround
 
 bindkey '^[^?' backward-kill-word
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
